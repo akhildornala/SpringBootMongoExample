@@ -14,4 +14,9 @@ public class WelcomeController {
         return "welcome " + name;
     }
 
+    @GetMapping("/test/{name}")
+    public String test(@PathVariable String name) {
+        return "test " + name;
+    }
+
 }
