@@ -1,9 +1,6 @@
 package com.example.SpringBootMongoExample.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/welcome")
@@ -15,8 +12,8 @@ public class WelcomeController {
     }
 
     @GetMapping("/test/{name}")
-    public String test(@PathVariable String name) {
-        return "test 1 " + name;
+    public String test(@PathVariable String name, @RequestParam("gender") String gender) {
+        return "test 1 " + name + " is " + gender;
     }
 
 }
