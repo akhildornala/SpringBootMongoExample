@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/welcome")
 public class WelcomeController {
+    
 
     @GetMapping("/hi/{name}")
     public String welcome(@PathVariable String name) {
