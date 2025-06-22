@@ -13,7 +13,6 @@ public class WelcomeController {
 
     }
     
-
     @GetMapping("/test/{name}")
     public String test(@PathVariable String name, @RequestParam("gender") String gender) {
         return "test 1 " + name + " is " + gender;
